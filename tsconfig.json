@@ -1,0 +1,51 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"alwaysStrict": true,
+		"esModuleInterop": true,
+		"baseUrl": ".",
+		"paths": {
+			"@action": ["src/action"],
+			"@component/*": ["src/component/*"],
+			"@component": ["src/component"],
+			"@definition/*": ["src/definition/*"],
+			"@definition": ["src/definition"],
+			"@interface": ["src/interface"],
+			"@interface/*": ["src/interface/*"],
+			"@pages/*": ["src/pages/*"],
+			"@store/*": ["src/store/*"],
+			"@static/*": ["public/static/*"],
+			"@lib/*": ["lib/*"],
+			"@helper/*": ["helper/*"],
+			"@sb/*": ["storybook/*"],
+			"@styles/*": ["src/styles/*"],
+			"@test/*": ["test/*"]
+		},
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"module": "esnext",
+		"moduleResolution": "node",
+		"noEmit": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": false,
+		"target": "esnext"
+	},
+	"exclude": [
+		"node_modules",
+		"dist",
+		".next",
+		"out",
+		"next.config.js",
+		".babelrc",
+		"bundles",
+		"coverage",
+		"test/*"
+	],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/tailwind/first-app.js", "lib/tailwind/second-app.js"]
+}
