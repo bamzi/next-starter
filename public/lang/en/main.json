@@ -1,5 +1,5 @@
 {
-	"test": {
-		"item1": "item-something"
+	"app": {
+		"title": "Vault Locker Pay to Unlock"
 	}
 }

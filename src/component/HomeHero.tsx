@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
+import { Box, Image, Link, Text, useColorModeValue } from '@chakra-ui/core';
 import { useTranslation } from '@helper/i18n';
 import * as React from 'react';
 
@@ -103,7 +104,7 @@ const HomeHero: React.FunctionComponent<Props> = ({}) => {
 							<div className="rounded-md shadow">
 								<a
 									href="/#"
-									className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+									className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-c2-600 hover:bg-c2-500 focus:outline-none focus:border-c2-700 focus:shadow-outline-c2 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
 								>
 									Learn more
 								</a>
@@ -111,13 +112,49 @@ const HomeHero: React.FunctionComponent<Props> = ({}) => {
 							<div className="mt-3 sm:mt-0 sm:ml-3">
 								<a
 									href="/#"
-									className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+									className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-c2-700 bg-c2-100 hover:text-c2-600 hover:bg-c2-100 focus:outline-none focus:shadow-outline-c2 focus:border-c2-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
 								>
 									Get started
 								</a>
 							</div>
 						</div>
 					</div>
+					<Box p={4} display={{ md: 'flex' }}>
+						<Box flexShrink={0}>
+							<Image
+								borderRadius="lg"
+								width={{ md: 40 }}
+								src="https://bit.ly/2jYM25F"
+								alt="Woman paying for a purchase"
+							/>
+						</Box>
+						<Box mt={{ base: 4, md: 0 }} ml={{ md: 6 }}>
+							<Text
+								fontWeight="bold"
+								textTransform="uppercase"
+								fontSize="sm"
+								letterSpacing="wide"
+								color={useColorModeValue('c1.800', 'c1.200')}
+							>
+								Marketing
+							</Text>
+							{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+							<Link
+								mt={1}
+								display="block"
+								fontSize="lg"
+								lineHeight="normal"
+								fontWeight="semibold"
+								href="#"
+							>
+								Finding customers for your new business
+							</Link>
+							<Text mt={2} color="gray.500">
+								Getting a new business off the ground is a lot of hard work. Here are five ideas you
+								can use to find your first customers.
+							</Text>
+						</Box>
+					</Box>
 				</main>
 			</div>
 		</>

@@ -1,3 +1,4 @@
+import { ColorModeScript } from '@chakra-ui/core';
 import { DocumentLanguageProps, i18nPropsFromCtx } from '@helper/i18n';
 import Document, {
 	Head,
@@ -20,9 +21,10 @@ export default class MyDocument extends Document<VNSDocumentProps> {
 				<Head>
 					{/* PWA primary color */}
 					<meta name="theme-color" content="" />
-					<script src="prefer.js" />
+					{/* <script src="prefer.js" /> */}
 				</Head>
 				<body>
+					<ColorModeScript defaultColorMode="system" />
 					<Main />
 					<NextScript />
 				</body>

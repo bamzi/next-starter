@@ -2,12 +2,12 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 let colors;
-if (process.env.platform === 'first-app') {
-	colors = require('./lib/tailwind/first-app');
-} else if (process.env.platform === 'second-app') {
-	colors = require('./lib/tailwind/second-app');
+if (process.env.NEXT_PUBLIC_PLATFORM === 'app1') {
+	colors = require('./lib/palette/app1');
+} else if (process.env.NEXT_PUBLIC_PLATFORM === 'app2') {
+	colors = require('./lib/palette/app2');
 } else {
-	colors = require('./lib/tailwind/default');
+	colors = require('./lib/palette/default');
 }
 // To overwrite any default value, refer to:
 // https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js
@@ -36,6 +36,7 @@ module.exports = {
 			xs: '0.75rem',
 			sm: '0.875rem',
 			base: '1rem',
+			md: '1rem',
 			lg: '1.125rem',
 			xl: '1.25rem',
 			'2xl': '1.5rem',

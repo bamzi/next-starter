@@ -47,5 +47,5 @@
 		"coverage",
 		"test/*"
 	],
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/tailwind/first-app.js", "lib/tailwind/second-app.js"]
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/tailwind/app1.js", "lib/tailwind/app2.js"]
 }

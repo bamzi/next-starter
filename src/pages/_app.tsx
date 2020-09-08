@@ -1,9 +1,15 @@
 // import '@streamlinehq/streamline-icons-react/dist/components/StreamlineIcon.css'
 import '@styles/index.css';
 
+import { ChakraProvider } from '@chakra-ui/core';
+import theme from '@chakra-ui/theme';
+import { merge } from '@chakra-ui/utils';
 import { appWithTranslation } from '@helper/i18n';
+import { theme as themeChakra } from '@lib/theme-chakra';
 import App, { AppProps } from 'next/app';
 import React from 'react';
+
+merge(theme, themeChakra);
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function reportWebVitals(metric) {
@@ -17,7 +23,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 	if (!pageProps.namespacesRequired) {
 		pageProps.namespacesRequired = ['main'];
 	}
-	return <Component {...pageProps} />;
+	return (
+		<ChakraProvider resetCSS>
+			<Component {...pageProps} />
+		</ChakraProvider>
+	);
 };
 MyApp.getInitialProps = async (appContext) => {
 	const appProps = await App.getInitialProps(appContext);
